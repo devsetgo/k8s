@@ -1,0 +1,29 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURKekNDQWcrZ0F3SUJBZ0lDQm5Vd0RRWUpLb1pJaHZjTkFRRUxCUUF3TXpFVk1CTUdBMVVFQ2hNTVJHbG4KYVhSaGJFOWpaV0Z1TVJvd0dBWURWUVFERXhGck9ITmhZWE1nUTJ4MWMzUmxjaUJEUVRBZUZ3MHlNREV5TWpZeQpNVFUzTWpWYUZ3MDBNREV5TWpZeU1UVTNNalZhTURNeEZUQVRCZ05WQkFvVERFUnBaMmwwWVd4UFkyVmhiakVhCk1CZ0dBMVVFQXhNUmF6aHpZV0Z6SUVOc2RYTjBaWElnUTBFd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUIKRHdBd2dnRUtBb0lCQVFDaDVuSHg2cVdaL001QVRmdElOR1JnS3d5MWltNU43MndzeG80cG1zVUl5WWFVcmZjTwp6UXNIa1pyR2pweS9vblU4cmlFMXBXNTl4aVRSZWpJOW10Q2Rqd004V0hhbzlTRUxhSWVOaSsvMFkvdzZCT0pYCkpyb1ZaNnB0YzNtYWFvSUFWb2JuOXZXeitJWW82aVBYWW1Ja1Bydnh1YnFWbFphcU1HbjhoeldCeXFKWTlLOTkKdWJFVUdwUW1pblg5YUJrajNjM1UxUmZuRWFlUjRCOE1kN0RvM3JZRGU4aWpHRzFMdHlIWWxqOW9SditzVU5BdApWYytYc3J4M1VrWitmaTIyT28wemhkcTlERHhZbHdUSXNBVlhKMUtTQVhqM29xQWowU1dXZDdDQXpXa1ZVSzBqCmYvQ1dZKzJuaFZqVzR3T05ldG4ya2ZqWXE1SFgvOUREVGp1aEFnTUJBQUdqUlRCRE1BNEdBMVVkRHdFQi93UUUKQXdJQmhqQVNCZ05WSFJNQkFmOEVDREFHQVFIL0FnRUFNQjBHQTFVZERnUVdCQlEzQ3NxUndzd3p2SVdhVHRObwpveDBpSDVhdldEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFoVnJ0M3BCKzNPMExaM0xzTTBOWHRFMm1WaEVKCjRtL3gzMnJWWGRCZjZ1Ty9EUFc1K0dXUUZZaXFweE4vQ0dDeXZDSW1VRVBJTytEdG13OC8ybWRFOUZvcHpxUkIKSnhNa1BBRTNFbFNuQUJORW0xNHkzUUhQL3ljMEhRM1Y2ZTF0eFRpN2hvbUNiN3BYR2pUZjNBOHpNREdMOENHSwpJaDh1bFp3RENUcURJb3pNalNBWVdjOXcxM2dJWUhZN3VTL2NydzZDRkI0VFdqd2x3cVBveDA1eVVLZGp6bHhkCkVTME1IQ01NbXNkVlZoaUVmaGtKbkpmYlB0NHczSUM1VStVVEREVlQ4QnY2VlRtRzBnRzFOK1NwcklqalZKZWgKWENjcUhGQkgwa3VkTU5mQk5SWWhXRENBbjVHS0NoWTVzSjArOWJXbU5NMUFYd1ZFVEhmUWQ3ZnBKUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://52dcbd84-b0b1-4370-9834-1b1c16fda69f.k8s.ondigitalocean.com
+  name: do-nyc3-dsg-k8s-1-19-3-do-2-nyc3
+contexts:
+- context:
+    cluster: do-nyc3-dsg-k8s-1-19-3-do-2-nyc3
+    user: do-nyc3-dsg-k8s-1-19-3-do-2-nyc3-admin
+  name: do-nyc3-dsg-k8s-1-19-3-do-2-nyc3
+current-context: do-nyc3-dsg-k8s-1-19-3-do-2-nyc3
+kind: Config
+preferences: {}
+users:
+- name: do-nyc3-dsg-k8s-1-19-3-do-2-nyc3-admin
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - kubernetes
+      - cluster
+      - kubeconfig
+      - exec-credential
+      - --version=v1beta1
+      - --context=default
+      - 52dcbd84-b0b1-4370-9834-1b1c16fda69f
+      command: doctl
+      env: null
